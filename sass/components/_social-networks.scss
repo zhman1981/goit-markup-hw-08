@@ -1,0 +1,28 @@
+.social-networks {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-networks__icon {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    fill: #afb1b8;
+    transition: background-color 250ms $cubic, fill 250ms $cubic;
+
+    &:hover,
+    &:focus {
+        background-color: $button-bg-color;
+        fill: $primary-bg-color;
+    }
+}
