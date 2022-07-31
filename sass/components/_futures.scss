@@ -6,13 +6,21 @@
             gap: 30px;
             flex-basis: calc((100% - 60px) / 2);
         }
+
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+            gap: 0;
+        }
     }
 }
 
 .futures {
     .section__item {
         @media screen and (min-width: 768px) {
-            width: calc((50% - 30px));
+            width: calc((50% - 15px));
+        }
+        @media screen and (min-width: 1200px) {
+            width: 100%;
         }
     }
 }
@@ -27,7 +35,7 @@
     background: $button-portfolio-bg-color;
     border-radius: 4px;
     // @media screen and (min-width: 768px) {
-    //     width: calc((50% - 30px));
+    //     margin-bottom: 0;
     // }
     @media screen and (min-width: 1200px) {
         width: 270px;
@@ -51,6 +59,6 @@
     color: $secondary-text-color;
 }
 
-.futures__item {
-    width: 270px;
-}
+// .futures__item {
+//     width: 270px;
+// }

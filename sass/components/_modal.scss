@@ -4,6 +4,9 @@
     left: 0;
     width: 100%;
     height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 93px;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 250ms $cubic;
@@ -24,11 +27,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 40px;
-    width: 528px;
-    height: 581px;
+    width: 100%;
+    max-width: 450px;
+    height: 609px;
     background-color: $primary-bg-color;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms $cubic;
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+        max-width: 100%;
+    }
 }
 
 .modal__btn-close {
@@ -59,7 +68,7 @@
     justify-content: center;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     color: $primary-text-color;
@@ -160,7 +169,8 @@
 
 .modal__confirm-icon {
     display: inline-block;
-    margin-right: 8px;
+    padding: 0;
+    margin-right: 2px;
     width: 14px;
     height: 13px;
     border: 1px solid $primary-text-color;
@@ -172,9 +182,20 @@
 
 .modal__confirm-icon-apply {
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: 2px;
+    left: 2px;
     opacity: 0;
+}
+
+.modal__confirm-text {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .modal__confirm-agreement {

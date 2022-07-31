@@ -1,5 +1,19 @@
 .team {
     background-color: $button-portfolio-bg-color;
+
+    .section__list {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            flex-basis: calc((100% - 60px) / 2);
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+            gap: 0;
+        }
+    }
 }
 
 .team__item {
@@ -7,6 +21,10 @@
     border-bottom: 1px solid #ECECEC;
     border-radius: 0px 0px 4px 4px;
     background-color: $primary-bg-color;
+    
+    @media screen and (min-width: 768px) {
+        width: calc((50% - 15px));
+    }
 }
 
 .team__img {
