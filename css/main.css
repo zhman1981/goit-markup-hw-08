@@ -1373,17 +1373,49 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
 }
-
-.portfolio__btn-list .portfolio__btn-list-item + .portfolio__btn-list-item {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .portfolio__btn-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__btn-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio__btn-list .portfolio__btn-list-item:not(:nth-child(3n+1)) {
+    margin-left: 8px;
+  }
+  .portfolio__btn-list .portfolio__btn-list-item:first-child {
+    margin-bottom: 15px;
+  }
+  .portfolio__btn-list .portfolio__btn-list-item:last-child {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__btn-list .portfolio__btn-list-item + .portfolio__btn-list-item {
+    margin-left: 8px;
+  }
 }
 
 .portfolio__btn {
@@ -1414,14 +1446,69 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 29px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
 }
-.portfolio__list .portfolio__list-item {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+@media screen and (max-width: 767px) {
+  .portfolio__list .portfolio__list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 29px;
+  }
+  .portfolio__list .portfolio__list-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 29px;
+  }
+  .portfolio__list .portfolio__list-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
+}
+
+.portfolio__list-item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__list-item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__list-item {
+    width: 370px;
+  }
 }
 
 .portfolio__title {
@@ -1443,21 +1530,37 @@ img {
 
 .portfolio__card {
   padding: 20px 24px;
-  width: 370px;
   margin: 0;
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .crutch {
+    padding-bottom: 40px;
+  }
+}
+
 .portfolio__img {
   position: relative;
   display: block;
+  width: 100%;
   overflow: hidden;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .portfolio__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__img {
+    width: 370px;
+  }
 }
 
 .portfolio__overlay {

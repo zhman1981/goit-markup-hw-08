@@ -44,15 +44,37 @@
                     </a>
                 </li>
             </ul>
-            <button type="button" class="header__menu-btn header__menu-is-open" aria-expanded="false"
-                aria-controls="mobile-menu" data-menu-button>
+            <button type="button" class="header__menu-btn" aria-expanded="false" aria-controls="mobile-menu"
+                data-menu-button>
                 <svg width="40" height="40" aria-label="Кнопка виклику мобільного меню">
                     <use class="header__menu-icon-cross" href="./images/menu-close.svg#icon-close"></use>
                     <use class="header__menu-icon-menu" href="/images/menu-close.svg#icon-menu"></use>
                 </svg>
             </button>
             <div class="header__mobile-menu" id="mobile-menu" data-menu>
-                Menu
+                <ul class="header__mobile-link-list">
+                    <li class="header__item"><a class="header__mobile-link" href="./index.html">Студия</a></li>
+                    <li class="header__item"><a class="header__mobile-link header__mobile-link--active" href="./portfolio.html">Портфолио</a></li>
+                    <li class="header__item"><a class="header__mobile-link" href="">Контакты</a></li>
+                </ul>
+                <ul class="header__mobile-contacts">
+                    <li class="header__item">
+                        <a class="header__mobile-contacts-phone" href="tel:+380961111111">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__mobile-contacts-email" href="mailto:info@devstudio.com">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
+                <ul class="header__mobile-soc">
+                    <li class="header__item"><a class="header__mobile-soc-link" href="">Instagram</a></li>
+                    <li class="header__item"><a class="header__mobile-soc-link" href="">Twitter</a></li>
+                    <li class="header__item"><a class="header__mobile-soc-link" href="">Facebook</a></li>
+                    <li class="header__item"><a class="header__mobile-soc-link" href="">LinkedIn</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -81,7 +103,7 @@
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-1.jpg" alt="Технокряк" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-1.jpg 1x, ./images/img-p-1-2x.jpg 2x" src="./images/img-p-1.jpg" alt="Технокряк">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -90,14 +112,14 @@
                             </div>
                             <div class="portfolio__card">
                                 <h2 class="portfolio__title">Технокряк</h2>
-                                <p class="portfolio__text">Веб-сайт</p>
+                                <p class="portfolio__text crutch">Веб-сайт</p>
                             </div>
                         </a>
                     </li>
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-2.jpg" alt="Постер New Orlean vs Golden Star" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-2.jpg 1x, ./images/img-p-2-2x.jpg 2x" src="./images/img-p-2.jpg" alt="Постер New Orlean vs Golden Star" width="370">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -113,7 +135,7 @@
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-3.jpg" alt="Ресторан Seafood" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-3.jpg 1x, ./images/img-p-3-2x.jpg 2x" src="./images/img-p-3.jpg" alt="Ресторан Seafood" width="370">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -129,7 +151,7 @@
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-4.jpg" alt="Проект Prime" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-4.jpg 1x, ./images/img-p-4-2x.jpg 2x" src="./images/img-p-4.jpg" alt="Проект Prime" width="370">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -145,7 +167,7 @@
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-5.jpg" alt="Проект Boxes" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-5.jpg 1x, ./images/img-p-5-2x.jpg 2x" src="./images/img-p-5.jpg" alt="Проект Boxes" width="370">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -161,7 +183,7 @@
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-6.jpg" alt="Inspiration has no Borders" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-6.jpg 1x, ./images/img-p-6-2x.jpg 2x" src="./images/img-p-6.jpg" alt="Inspiration has no Borders" width="370">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -177,7 +199,7 @@
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-7.jpg" alt="Издание Limited Edition" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-7.jpg 1x, ./images/img-p-7-2x.jpg 2x" src="./images/img-p-7.jpg" alt="Издание Limited Edition" width="370">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -193,7 +215,7 @@
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-8.jpg" alt="Проект LAB" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-8.jpg 1x, ./images/img-p-8-2x.jpg 2x" src="./images/img-p-8.jpg" alt="Проект LAB" width="370">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -209,7 +231,7 @@
                     <li class="portfolio__list-item">
                         <a class="portfolio__block" href="">
                             <div class="portfolio__img">
-                                <img class="portfolio__img" src="./images/img-p-9.jpg" alt="Growing Business" width="370">
+                                <img class="portfolio__img" srcset="./images/img-p-9.jpg 1x, ./images/img-p-9-2x.jpg 2x" src="./images/img-p-9.jpg" alt="Growing Business" width="370">
                                 <div class="portfolio__overlay">
                                     <p class="portfolio__overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит
@@ -290,6 +312,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
    
 </html>
